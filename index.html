@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Rugby Live — Live matches, free & official</title>
+    <meta name="description" content="Find rugby matches streaming free and officially today." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Free Rugby Live home"><span class="brand-mark">↗</span><span>free<span>rugby live</span></span></a>
+        <nav class="main-nav" aria-label="Main navigation"><a class="active" href="#matches">Matches</a><a href="#leagues">Leagues</a><a href="#news">News</a><a href="#advertise">Advertise</a><a href="#how-it-works">How it works</a></nav>
+        <div class="top-actions"><button class="icon-button" aria-label="Search" id="focus-search">⌕</button><button class="account-button" id="auth-button" aria-label="Open account">Log in</button></div>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy"><p class="eyebrow"><span class="pulse"></span> Broadcasting now</p><h1 id="hero-title">Rugby,<br /><em>wide open.</em></h1><p class="hero-text">Every match worth watching. Find the free, official broadcast in a few taps.</p><div class="hero-stats"><div><strong>12</strong><span>live today</span></div><div><strong>38</strong><span>upcoming</span></div><div><strong>09</strong><span>competitions</span></div></div></div>
+          <div class="hero-art" aria-label="Rugby match atmosphere"><div class="art-label">SATURDAY<br /><strong>03.09.26</strong></div><div class="art-score"><span>RUGBY</span><strong>LIVE</strong></div></div>
+        </section>
+
+        <section class="toolbar-section" id="matches" aria-labelledby="matches-title">
+          <div class="section-heading"><div><p class="eyebrow">The schedule</p><h2 id="matches-title">On the field</h2></div><div class="view-toggle"><button class="selected" aria-label="Grid view">▦</button><button aria-label="List view">☰</button></div></div>
+          <div class="toolbar"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search teams or competitions" /></label><div class="chips" id="leagues" role="group" aria-label="Filter by competition"><button class="chip active" data-filter="All">All matches</button><button class="chip" data-filter="United Rugby Championship">URC</button><button class="chip" data-filter="Top 14">Top 14</button><button class="chip" data-filter="Super Rugby Pacific">Super Rugby</button><button class="chip" data-filter="Women's Rugby">Women's</button></div></div>
+          <div class="league-directory"><span>Competition pages</span><a href="urc.html">URC ↗</a><a href="top14.html">Top 14 ↗</a><a href="super-rugby.html">Super Rugby ↗</a><a href="womens-rugby.html">Women's ↗</a><a href="tests.html">Tests ↗</a></div>
+        </section>
+
+        <section class="match-grid" id="match-grid" aria-live="polite"></section>
+        <p class="empty-state" id="empty-state" hidden>No matches found. Try another team or competition.</p>
+
+        <section class="news-section" id="news" aria-labelledby="news-title">
+          <div class="section-heading"><div><p class="eyebrow">The rugby desk</p><h2 id="news-title">The latest word</h2></div><span class="news-note">Punditry · press rooms · analysis</span></div>
+          <div class="news-filters" role="group" aria-label="Filter rugby news"><button class="news-filter active" data-news-filter="All">All stories</button><button class="news-filter" data-news-filter="Punditry">Punditry</button><button class="news-filter" data-news-filter="Press conference">Press rooms</button><button class="news-filter" data-news-filter="Analysis">Analysis</button><button class="news-filter" data-news-filter="Team news">Team news</button></div>
+          <div class="news-grid" id="news-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="sponsor-section" id="advertise" aria-labelledby="advertise-title">
+          <div class="sponsor-copy"><p class="eyebrow">For brands with a point of view</p><h2 id="advertise-title">Put your name<br /><em>in the game.</em></h2><p>Reach rugby fans while they are choosing what to watch, reading the latest word and following every fixture.</p><button class="sponsor-button" id="open-sponsor">Become a partner ↗</button></div>
+          <div class="sponsor-inventory"><p class="eyebrow">Available placements</p><div class="inventory-row"><strong>01</strong><span>Matchday sponsor</span><small>Premium</small></div><div class="inventory-row"><strong>02</strong><span>News desk partner</span><small>Featured</small></div><div class="inventory-row"><strong>03</strong><span>Competition hub</span><small>Always-on</small></div><div class="audience-row"><span>Audience snapshot</span><strong>38k+</strong><span>monthly rugby fans</span></div></div>
+        </section>
+
+        <section class="editorial-row" id="how-it-works">
+          <div class="note-block"><p class="eyebrow">The Free Rugby Live promise</p><h2>Only the good stuff.</h2><p>We surface legal, free-to-watch broadcasts from rights holders around the world. No sketchy pop-ups. No dead links. Just the game.</p><a href="#matches" class="text-link">Browse all matches <span>→</span></a></div>
+          <div class="feature-block"><div class="feature-image"><span>01 / 03</span><button class="play-button" aria-label="Play rugby highlights">▶</button></div><div class="feature-caption"><div><p class="eyebrow">OpenRugby picks</p><h3>Three matches<br />not to miss</h3></div><span class="arrow">↗</span></div></div>
+        </section>
+      </main>
+      <footer><span class="brand small"><span class="brand-mark">↗</span><span>free<span>rugby live</span></span></span><span>Free to find. Official to watch.</span><span>© 2026 Free Rugby Live</span></footer>
+    </div>
+    <div class="player-modal" id="player-modal" aria-hidden="true" role="dialog" aria-labelledby="player-title">
+      <div class="player-panel"><button class="modal-close" id="close-player" aria-label="Close player">×</button><p class="eyebrow"><span class="pulse"></span> On OpenRugby</p><h2 id="player-title">Ready to watch</h2><div class="player-screen" id="player-screen"><span class="player-ball">◉</span><span id="player-status">Authorized stream player loading</span><iframe id="player-frame" title="Live rugby stream" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen hidden></iframe></div><p class="player-copy" id="player-copy">Live viewing stays on this page when a licensed broadcaster embed is available.</p><a class="watch-button player-link" id="player-link" href="#" target="_blank" rel="noopener" hidden>Open official stream ↗</a></div>
+    </div>
+    <div class="sponsor-modal" id="sponsor-modal" aria-hidden="true" role="dialog" aria-labelledby="sponsor-title"><div class="sponsor-panel"><button class="modal-close" id="close-sponsor" aria-label="Close advertising enquiry">×</button><p class="eyebrow">Partner enquiries</p><h2 id="sponsor-title">Let’s talk<br /><em>rugby.</em></h2><form id="sponsor-form"><label>Company name<input name="company" required placeholder="Your company" /></label><label>Work email<input name="email" type="email" required placeholder="name@company.com" /></label><label>What are you interested in?<select name="placement"><option>Matchday sponsor</option><option>News desk partner</option><option>Competition hub</option></select></label><button class="watch-button" type="submit">Send enquiry ↗</button></form><p class="form-success" id="form-success" hidden>Thanks. Your enquiry is ready for the Free Rugby Live partnerships team.</p><div class="paypal-box"><div><p class="eyebrow">Pay sponsorship securely</p><strong>Payments go to</strong><span>mihleninzi14@gmail.com</span></div><div class="paypal-options"><a href="https://www.paypal.com/paypalme/mihleninzi14/50" target="_blank" rel="noopener">€50</a><a href="https://www.paypal.com/paypalme/mihleninzi14/150" target="_blank" rel="noopener">€150</a><a href="https://www.paypal.com/paypalme/mihleninzi14/300" target="_blank" rel="noopener">€300</a></div><a class="paypal-link" href="https://www.paypal.com/paypalme/mihleninzi14" target="_blank" rel="noopener">Choose a different amount ↗</a></div></div></div>
+    <div class="auth-modal" id="auth-modal" aria-hidden="true" role="dialog" aria-labelledby="auth-title"><div class="auth-panel"><button class="modal-close" id="close-auth" aria-label="Close account dialog">×</button><div class="auth-tabs"><button class="auth-tab active" data-auth-mode="login">Log in</button><button class="auth-tab" data-auth-mode="signup">Sign up</button></div><p class="eyebrow">Free Rugby Live account</p><h2 id="auth-title">Welcome back.</h2><form id="auth-form"><label>Name<input name="name" id="auth-name" placeholder="Your name" /></label><label>Email<input name="email" type="email" required placeholder="you@example.com" /></label><label>Password<input name="password" type="password" required minlength="6" placeholder="At least 6 characters" /></label><button class="watch-button" type="submit" id="auth-submit">Log in ↗</button></form><p class="auth-message" id="auth-message" hidden></p><button class="logout-button" id="logout-button" hidden>Log out</button></div></div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+  </body>
+</html>
